@@ -6,20 +6,20 @@ function Home() {
       <>
         <main>
           <input type="text" name="busca" id="busca" placeholder="Digite aqui sua busca"/>
-          <div className='grid grid-cols-3'>
+          <div className='grid grid-cols-3 gap-4'>
             {
-              data.map(filme => (
-                  <div className='card' key={filme.title}>
+              data.map((filme, index) => (
+                  <div className='card' key={index}>
                     <h1>{filme.title}</h1>
-                    <img src={filme.image} alt={filme.title} />
-                    <div className='tag'>
-                      {filme.tags.map(tag => (
-                        <span key={tag} className='text-purple-900'> {tag} </span>
+                    <img className="mb-2 rounded-lg" src={filme.image} alt={filme.title} />
+                    <div className='tags'>
+                      {filme.tags.map((tags, index) => (
+                        <span key={index} className='bg-purple-600 p-1 m-1 rounded-lg text-white'> {tags} </span>
                       ))}
                   </div>  
                   <div className='texto'>
-                        {filme.text.map(texto => (
-                          <p key={texto}> {texto} </p>
+                        {filme.text.map((paragrafo, index) => (
+                          <p key={index}> {paragrafo} </p>
                         ))}
                   </div>
                   </div>
