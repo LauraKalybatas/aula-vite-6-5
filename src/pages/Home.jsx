@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 function Home() {
   console.log(data)
+  
+
   const [filmes, setFilmes] = useState([])
 
     const apiKey= 'api_key=7c572a9f5b3ba776080330d23bb76e1e'
@@ -84,8 +86,20 @@ function Home() {
           </div>
 
       </main>
-
-      <footer>
+      <footer className="footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
+        <aside>
+          <p className='text-violet-500 font-bold'>CINE<a className='text-amber-400'>LORA</a></p>
+          <p className='text-white'>Uma coleção de artigos de todo tipo que abrangem o mundo cinematografico, sejam informativos, resenhas ou apenas uma lista dos atores mais bonitos da última decada.</p>
+        </aside> 
+        <nav className='text-white text-sm'>
+          <h6 className="footer-title">Mais sobre <a className='font-bold'>CINELORA</a></h6> 
+          <div className='grid grid-cols-4'>
+            <span>BLOG</span>
+            <span>SOBRE</span>
+            <span>TERMOS</span>
+            <span>CONTACT US</span>
+          </div>
+        </nav> 
       </footer>
     </>
   )
