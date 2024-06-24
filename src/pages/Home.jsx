@@ -1,5 +1,6 @@
 import data from '../../artigos.json'
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 function Home() {
   console.log(data)
@@ -30,11 +31,12 @@ function Home() {
               <p className='text-2xl'>Milhões de filmes, séries e artigos para descobrir. Explore já.</p>
               
               <form className="max-w-md mx-auto mt-8">   
-                <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                <label htmlFor="default-search" className="block mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
 
-                <div className="relative">
+                <div>
+                <input type="search" id="default-search" className="w-full p-3 text-sm rounded-full bg-black bg-opacity-25 border border-solid border-neutral-600 focus:border-neutral-600 focus:outline-none" placeholder="Pesquise por título, gênero, elenco, etc..."/>
 
-                  <input type="search" id="default-search" className="block w-full p-2 text-sm rounded-full bg-transparent text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
+
                 </div>
               </form>
             </div>
@@ -46,27 +48,33 @@ function Home() {
                 filmes.map(filme => (
                   <>
                     <div className="inline-block px-3 ">
-                    <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                    <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                      <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
-                    </div>
+                        <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
+                        <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                          <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
+                        </div>
+                        <div className="text-sm pl-20 pt-3">
+                          <Link to={`${filme.id}`} className="bg-violet-500 pr-2 pl-2 pt-1 pb-1 rounded-xl">Saiba Mais</Link>
+                        </div>
                     </div>
                 </>
                 ))}
           </div>
 
           <p className='text-white text-3xl font-bold ml-4 mt-4'>Artigos</p>
-          <div className="listaFilmes flex flex-row overflow-x-scroll pt-4 hide-scroll-bar relative pb-6">
+          <div className="listaFilmes flex flex-row overflow-x-scroll pt-4 relative pb-6">
                {
                 filmes.map(filme => (
                   <>
                     <div className="inline-block px-3 ">
-                    <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                    <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                      <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
+                      <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
+                      <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
+                      </div>
+                      <div className="text-sm pl-20 pt-3">
+                        <Link to={`${filme.id}`} className="bg-violet-500 pr-2 pl-2 pt-1 pb-1 rounded-xl">Saiba Mais</Link>
+                      </div>
                     </div>
-                    </div>
-                </>
+                  </>
                 ))}
           </div>
 
@@ -75,11 +83,14 @@ function Home() {
                {
                 filmes.map(filme => (
                   <>
-                    <div className="inline-block px-3 ">
-                    <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                    <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                      <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
-                    </div>
+                      <div className="inline-block px-3 ">
+                      <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
+                      <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
+                      </div>
+                      <div className="text-sm pl-20 pt-3">
+                        <Link to={`${filme.id}`} className="bg-violet-500 pr-2 pl-2 pt-1 pb-1 rounded-xl">Saiba Mais</Link>
+                      </div>
                     </div>
                 </>
                 ))}
