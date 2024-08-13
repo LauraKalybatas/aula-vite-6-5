@@ -20,29 +20,29 @@ function Filmes() {
 
     return ( 
         <>
-            <main className="bg-zinc-900">
-                <h1 className="font-bold text-white text-2xl pt-5 pl-5">A biblioteca completa dos filmes disponíveis no <a className="text-violet-500">Cine</a><a className="text-amber-400">Lora</a></h1>
+            <main className="bg-neutral-900">
+                <h1 className="font-bold text-white text-[28px] pt-5 pl-[52px]">A biblioteca completa de informações <p>dos filmes disponíveis no <a className="text-violet-500">Cine</a><a className="text-amber-400">Lora</a></p></h1>
                 
-                <form className="max-w-md mx-12 mt-4 mb-10">   
-                    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                <form className=" mx-12 mt-4 mb-10">   
 
                     <div className="relative">
 
-                    <input type="search" id="default-search" className="block w-full p-2 text-sm rounded-full bg-transparent text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
+                    <input type="search" id="default-search" className="inline-flex w-[1100px] border-white p-2 text-sm rounded-full bg-transparent   border-2 pl-10 border-gray-300  transition-colors  focus:outline-none focus:border-yellow-400 text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
                     </div>
                 </form>
 
-                <div className="listaFilmes grid-4 pt-4 relative pb-6">
+                <div className=" grid-4 pt-4 relative">
                     {filmes.map(filme => (
                         <>
-                            <div className="inline-block pr-6 pb-5 pl-11">
-                                <img className='absolute w-1/6 h-64 pl-5  pt-5' src={`${urlImg}${filme.poster_path}`} alt=""/>
-                                <div className="w-56 h-80 max-w-xs overflow-hidden rounded-lg bg-zinc-800">
-                                    <h1 className="relative font-bold text-center text-white pt-64 ml-3 mr-3">{filme.title}</h1>
+                            <div className="inline-block  pb-[45px] ml-[50px]">
+                                <img className='absolute w-1/6 h-64 ml-[18px]  pt-5' src={`${urlImg}${filme.poster_path}`} alt=""/>
+                                <div className="w-56 h-[370px]  w-[240px] overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                    <h1 className="relative font-bold text-center text-white pt-[265px] ml-3 mr-3">{filme.title}</h1>
+                                    <div className="text-sm pl-[70px] pt-[17px]">
+                                        <Link to={`${filme.id}`} className="text-white font-bold	bg-violet-500 pr-4 pl-4 pt-2 pb-2 rounded-full">Saiba Mais</Link>
                                 </div>
-                                <div className="text-sm pl-20 pt-3">
-                                        <Link to={`${filme.id}`} className="bg-violet-500 pr-2 pl-2 pt-1 pb-1 rounded-xl">Saiba Mais</Link>
                                 </div>
+                                
                             </div>
                         </>
                     ))}
