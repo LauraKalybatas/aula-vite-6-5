@@ -41,65 +41,87 @@ function Home() {
             </div>
           </div>
 
-          <p className='text-white text-3xl font-bold ml-[50px] mt-[40px]'>Filmes</p>
-          <div className="pl-[30px] flex flex-row overflow-x-scroll pt-4 hide-scroll-bar relative pb-7">
+          <p className='text-white text-[35px] font-bold ml-[50px] mt-[20px] '>Filmes</p>
+          <div className="pl-[30px] pr-[30px] flex flex-row overflow-x-scroll pt-4 hide-scroll-bar relative pb-7">
                {
                 filmes.map(filme => (
                   <>
-                    <div className="inline-block px-3 ">
+                    <div className="inline-block px-4">
+                    <Link to={`${filme.id}`} >
+                      <div className="inline-block pt-4">
+
+                      
                         <img className='absolute w-1/6 h-64 ml-[18px]  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                        <div className=" h-[370px]  w-[240px]  overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                          <h1 className="relative font-bold text-center text-white pt-[265px] ml-3 mr-3">{filme.title}</h1>
+                        <div className=" h-[340px]  w-[240px]  overflow-hidden rounded-lg bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
+                         ease-in-out">
+                          <h1 className="relative font-bold text-center text-white text-[17px] pt-[265px] ml-3 mr-3">{filme.title}</h1>
                           <div className="text-sm pl-[70px] pt-[17px]">
-                          <Link to={`${filme.id}`} className="text-white font-bold	bg-violet-500 pr-4 pl-4 pt-2 pb-2 rounded-full">Saiba Mais</Link>
+                         
                         </div>
                         </div>
-                        
+                        </div>
+                        </Link>
                     </div>
+
                 </>
                 ))}
           </div>
 
-          <p className='text-white text-3xl font-bold ml-[50px] mt-[40px]'>Artigos</p>
-          <div className="pl-[30px]  flex flex-row overflow-x-scroll pt-4 relative pb-6">
+          <p className='text-white text-[35px] font-bold ml-[50px] mt-[20px] '>Artigos</p>
+          <div className="pl-[30px] pr-[30px]  flex flex-row overflow-x-scroll pt-4 relative pb-6">
           {
                 filmes.map(filme => (
                   <>
-                    <div className="inline-block px-3 ">
+                    <div className="inline-block px-4">
+                    <Link to={`${filme.id}`} >
+                      <div className="inline-block pt-4">
+
+                      
                         <img className='absolute w-1/6 h-64 ml-[18px]  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                        <div className=" h-[370px]  w-[240px]  overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                          <h1 className="relative font-bold text-center text-white pt-[265px] ml-3 mr-3">{filme.title}</h1>
+                        <div className=" h-[340px]  w-[240px]  overflow-hidden rounded-lg bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
+                         ease-in-out">
+                          <h1 className="relative font-bold text-center text-white text-[17px] pt-[265px] ml-3 mr-3">{filme.title}</h1>
                           <div className="text-sm pl-[70px] pt-[17px]">
-                          <Link to={`${filme.id}`} className="text-white font-bold	bg-violet-500 pr-4 pl-4 pt-2 pb-2 rounded-full">Saiba Mais</Link>
+                         
                         </div>
                         </div>
-                        
+                        </div>
+                        </Link>
                     </div>
+
                 </>
                 ))}
           </div>
 
-          <p className='text-white text-3xl font-bold ml-[50px] mt-[40px] '>Recomendações</p>
-          <div className="pl-[30px] flex flex-row overflow-x-scroll pt-4 hide-scroll-bar relative pb-[90px] ">
+          <p className='text-white text-[35px] font-bold ml-[50px] mt-[20px] '>Recomendações</p>
+          <div className="pl-[30px] pr-[30px]  flex flex-row overflow-x-scroll pt-4 relative pb-[90px]">
           {
                 filmes.map(filme => (
                   <>
-                    <div className="inline-block px-3 ">
+                    <div className="inline-block px-4 ">
+                    <Link to={`${filme.id}`} >
+                      <div className="inline-block pt-4">
+
+                      
                         <img className='absolute w-1/6 h-64 ml-[18px]  pt-5' src={`${urlImg}${filme.poster_path}`} alt="" />
-                        <div className=" h-[370px]  w-[240px]  overflow-hidden rounded-lg shadow-md bg-zinc-800 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                          <h1 className="relative font-bold text-center text-white pt-[265px] ml-3 mr-3">{filme.title}</h1>
+                        <div className=" h-[340px]  w-[240px]  overflow-hidden rounded-lg bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
+                         ease-in-out">
+                          <h1 className="relative font-bold text-center text-white text-[17px] pt-[265px] ml-3 mr-3">{filme.title}</h1>
                           <div className="text-sm pl-[70px] pt-[17px]">
-                          <Link to={`${filme.id}`} className="text-white font-bold	bg-violet-500 pr-4 pl-4 pt-2 pb-2 rounded-full">Saiba Mais</Link>
+                         
                         </div>
                         </div>
-                        
+                        </div>
+                        </Link>
                     </div>
+
                 </>
                 ))}
           </div>
 
       </main>
-      <footer className="footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
+      <div className="bg-neutral-900">
+      <footer className="rounded-t-3xl footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
         <aside className='pl-[50px]'>
           <p className='text-violet-500 text-[25px] font-bold mb-[10px]'>CINE<a className='text-amber-400'>LORA</a></p>
           <p className='text-stone-300 text-[15px'>Uma coleção de artigos de todo tipo que abrangem o mundo <p> cinematografico, sejam informativos, resenhas ou apenas uma</p> lista dos atores mais bonitos da última decada.</p>
@@ -110,10 +132,11 @@ function Home() {
             <span><Link to="/">HOME</Link></span>
             <span><Link to='Filmes'>FILMES</Link></span>
             <span><Link to='Blog'>BLOG</Link></span>
-            <span><Link to='Favorito'>FAVORITOS</Link></span>
+            <span><Link to='Contato'>CONTATO</Link></span>
           </div>
         </nav> 
       </footer>
+      </div>
     </>
   )
 }

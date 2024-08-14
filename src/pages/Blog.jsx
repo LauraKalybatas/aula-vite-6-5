@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 function Blog() {
   const [filmes, setFilmes] = useState([])
 
@@ -43,21 +43,23 @@ function Blog() {
                   ))}
               </div>
           </main>
-          <footer className="footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
-            <aside>
-              <p className='text-violet-500 font-bold'>CINE<a className='text-amber-400'>LORA</a></p>
-              <p className='text-white'>Uma coleção de artigos de todo tipo que abrangem o mundo cinematografico, sejam informativos, resenhas ou apenas uma lista dos atores mais bonitos da última decada.</p>
-            </aside> 
-            <nav className='text-white text-sm'>
-              <h6 className="footer-title">Mais sobre <a className='font-bold'>CINELORA</a></h6> 
-              <div className='grid grid-cols-4'>
-                <span>BLOG</span>
-                <span>SOBRE</span>
-                <span>TERMOS</span>
-                <span>CONTACT US</span>
-              </div>
-            </nav> 
-          </footer>
+          <div className="bg-neutral-900">
+      <footer className="rounded-t-3xl footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
+        <aside className='pl-[50px]'>
+          <p className='text-violet-500 text-[25px] font-bold mb-[10px]'>CINE<a className='text-amber-400'>LORA</a></p>
+          <p className='text-stone-300 text-[15px'>Uma coleção de artigos de todo tipo que abrangem o mundo <p> cinematografico, sejam informativos, resenhas ou apenas uma</p> lista dos atores mais bonitos da última decada.</p>
+        </aside> 
+        <nav className='text-white text-sm pl-[50px]'>
+          <h6 className="footer-title text-[15px] pt-[20px] mb-[10px]">Mais sobre <a className='font-bold'>CINELORA</a></h6> 
+          <div className='grid grid-cols-5 text-[17px]'>
+            <span><Link to="/">HOME</Link></span>
+            <span><Link to='Filmes'>FILMES</Link></span>
+            <span><Link to='Blog'>BLOG</Link></span>
+            <span><Link to='Contato'>Contato</Link></span>
+          </div>
+        </nav> 
+      </footer>
+      </div>
       </> 
   )
 }
