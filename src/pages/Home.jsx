@@ -33,7 +33,7 @@ function Home() {
               <form className=" mx-auto mt-8">   
                 
                 <div>
-                <input type="search" id="default-search" className="w-[600px] p-3 text-sm rounded-full bg-black bg-opacity-25 border border-solid border-neutral-600   border-white transition-colors  focus:outline-none focus:border-yellow-400 text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
+                <input type="search" id="default-search" className="w-[600px] p-3 text-sm rounded-full bg-black bg-opacity-25 border border-solid border-neutral-600 transition-colors  focus:outline-none focus:border-yellow-400 text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
 
 
                 </div>

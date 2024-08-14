@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flex-row.overflow-x-scroll::-webkit-scrollbar {
+    display: none;
+}
