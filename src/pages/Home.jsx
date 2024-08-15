@@ -1,11 +1,9 @@
-import data from '../../artigos.json'
 import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 
-function Home() {
-  console.log(data)
-  
 
+function Home() {
+  
   const [filmes, setFilmes] = useState([])
 
     const apiKey= 'api_key=7c572a9f5b3ba776080330d23bb76e1e'
@@ -19,7 +17,7 @@ function Home() {
     .then(response => setFilmes(response.results))
     .catch(error => console.log(error))
 
-  },[])
+    },[])
 
   return(
     <>
@@ -55,9 +53,7 @@ function Home() {
                         <div className=" h-[340px]  w-[240px]  overflow-hidden rounded-lg bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                           <h1 className="relative font-bold text-center text-white text-[17px] pt-[265px] ml-3 mr-3">{filme.title}</h1>
-                          <div className="text-sm pl-[70px] pt-[17px]">
                          
-                        </div>
                         </div>
                         </div>
                         </Link>

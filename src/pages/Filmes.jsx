@@ -39,11 +39,7 @@ function Filmes() {
                                 <img className='absolute w-1/6 h-64 ml-[18px] pt-5' src={`${urlImg}${filme.poster_path}`} alt=""/>
                                 <div className="h-[340px]  w-[240px] overflow-hidden rounded-lg bg-zinc-800 hover:shadow-amber-500 shadow-[0px_0px_30px_5px] duration-300 ease-in-out">
                                     <h1 className="relative font-bold text-center text-[17px] text-white pt-[265px] ml-4 mr-4">{filme.title}</h1>
-                                    
-                                       
-                            
-                                </div>
-                                
+                                </div> 
                             </div>
                             </Link>
                         </>

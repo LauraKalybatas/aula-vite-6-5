@@ -10,6 +10,7 @@ import PaginaFilmes from './pages/pagFilme.jsx'
 import Blog from './pages/Blog.jsx'
 import Contato from './pages/Contato.jsx'
 
+
 const router = createBrowserRouter(
   [
     {
@@ -18,10 +19,11 @@ const router = createBrowserRouter(
       children: [
         {index: true, element: <Home/>},
         {path: "filmes", element: <Filmes/>},
-        {path: "filmes/:id", element: <PaginaFilmes/>},
+        {path: "/:id", element: <PaginaFilmes/>},
         {path: "blog", element: <Blog/>},
         {path: "contato", element: <Contato/>},
         {path: "*", element: <PageNotFound/>}
+
       ]
     }
   ]
