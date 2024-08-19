@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { Link } from 'react-router-dom'
 
 export default function Forms() {
   const [name, setName] = useState('')
@@ -32,6 +33,7 @@ export default function Forms() {
   }
 
   return(
+    <>
       <div className='bg-neutral-900'>
           <div className="flex justify-center md:pt-24 pt-10">
                   <h1 className="md:text-6xl text-5xl md:w-full w-11/12 text-center md:pt-10 pt-10 " id="contato"><soan className='text-violet-500 fontbold'>Contate</soan><span className='text-amber-400 font-bold' >-nos</span></h1>
@@ -51,23 +53,43 @@ export default function Forms() {
                       placeholder="E-mail"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
-                      className="bg-foxus dark:bg-nav placeholder:text-ph dark:placeholder:text-white placeholder:text-2xl mb-5 border-b-8 border-tpg dark:border-dmnav py-1 focus:outline-none text-3xl rounded-b-md"/>
+                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl rounded-b-md"/>
 
                       <input
                       type="text" 
                       placeholder="Mensagem" 
                       onChange={(e) => setMessage(e.target.value)}
                       value={message}
-                      className="bg-foxus dark:bg-nav placeholder:text-ph dark:placeholder:text-white placeholder:text-2xl mb-10 border-b-8 border-tpg dark:border-dmnav py-1 focus:outline-none text-3xl rounded-b-md"/>
+                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl border-amber-400 rounded-b-md"/>
 
-                      <div className="flex justify-center mt-3">
+                      <div className="flex justify-center mt-3 pb-[150px]">
                           <button type='submit' value="enviar" className="px-7 py-2 bg-violet-500  dark:text-nav font-bold rounded-full focus:outline-none text-3xl text-white">ENVIAR</button>
                       </div>
 
                   </form>
               </div>
       </div>
+        <div className="bg-neutral-900">
+        <footer className="rounded-t-3xl footer grid grid-cols-2 p-10 bg-base-200 text-base-content bg-zinc-800">
+          <aside className='pl-[50px]'>
+            <p className='text-violet-500 text-[25px] font-bold mb-[10px]'>CINE<a className='text-amber-400'>LORA</a></p>
+            <p className='text-stone-300 text-[15px'>Uma coleção de artigos de todo tipo que abrangem o mundo <p> cinematografico, sejam informativos, resenhas ou apenas uma</p> lista dos atores mais bonitos da última decada.</p>
+          </aside> 
+          <nav className='text-white text-sm pl-[50px]'>
+            <h6 className="footer-title text-[15px] pt-[20px] mb-[10px]">Mais sobre <a className='font-bold'>CINELORA</a></h6> 
+            <div className='grid grid-cols-5 text-[17px]'>
+              <span><Link to="/">HOME</Link></span>
+              <span><Link to='Filmes'>FILMES</Link></span>
+              <span><Link to='Blog'>BLOG</Link></span>
+              <span><Link to='Contato'>CONTATO</Link></span>
+            </div>
+          </nav> 
+        </footer>
+        </div>
+        </>
+      
   )
+
 }
 
 
