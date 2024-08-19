@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 
-const imageurl = import.meta.env.VITE_IMG;
+const urlImg = 'https://image.tmdb.org/t/p/w342/'
 
-const MovieCard = (movie, showLink = true) => {
+
+
+const MovieCard = (movie = true) => {
     return (
         <div className="movie-card">
-            <img src={imageurl + movie.poster_path} alt={movie.title} />
+            <img src={urlImg + movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
-            {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
         </div>
     )
 }
