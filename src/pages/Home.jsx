@@ -1,10 +1,22 @@
 import { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 function Home() {
   
-  const [filmes, setFilmes] = useState([])
+  const [filmes, setFilmes] = useState([]);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if(!search) return
+      navigate(`/search?q=${search}`)
+      setSearch("")
+    
+  }
+
 
     const apiKey= 'api_key=7c572a9f5b3ba776080330d23bb76e1e'
     const urlBase = 'https://api.themoviedb.org/3/movie/'
@@ -28,10 +40,10 @@ function Home() {
               <p className='text-amber-400 text-4xl'>Bem-vindo(a).</p>
               <p className='text-2xl'>Milhões de filmes, séries e artigos para descobrir. Explore já.</p>
               
-              <form className=" mx-auto mt-8">   
+              <form className=" mx-auto mt-8" onSubmit={handleSubmit}>   
                 
                 <div>
-                <input type="search" id="default-search" className="w-[600px] p-3 text-sm rounded-full bg-black bg-opacity-25 border border-solid border-neutral-600 transition-colors  focus:outline-none focus:border-yellow-400 text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
+                <input type="search" id="default-search" onChange={(e) => setSearch(e.target.value)} value={search} className="w-[600px] p-3 text-sm rounded-full bg-black bg-opacity-25 border border-solid border-neutral-600 transition-colors  focus:outline-none focus:border-yellow-400 text-white" placeholder="Pesquise por título, gênero, elenco, etc..."/>
 
 
                 </div>
