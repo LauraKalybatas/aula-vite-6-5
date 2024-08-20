@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Recomendacao from "../componentes/Recomendacao/recomendacao"
+import { FaStar } from "react-icons/fa";
 
 function PaginaFilmes(){
 
@@ -17,13 +19,17 @@ function PaginaFilmes(){
         .then(response => response.json())
         .then(response => setFilmes(response))
         .catch(error => console.log(error))
-    
+
     },[])
+
+    
+
+
 
     return( 
         <>
-            <main className='bg-stone-700'>
-                <div className="absolute z-20 flex ">
+            <main className='bg-neutral-900'>
+                <div className="absolute z-20 flex">
                     <div className="pl-11 pt-8">
                 <img className="rounded-lg w-[339px] h-[550px]  " src={`${urlImg}${filmes.poster_path}`}></img>
                 </div>
@@ -33,10 +39,18 @@ function PaginaFilmes(){
         <div className="absolute z-20 mt-[100px] flex flex-col ml-[450px]">
             <div className="">
             <h1 className="text-white text-[36px] font-bold "> {filmes.title}</h1>
+            <div className="flex">
+            <p className="text-white text-[18px] pr-[10px]">{filmes.release_date}</p>
+            <span className="text-white text-bold pr-[10px]">–</span>
+            <p className="text-white text-[18px] pr-[10px]">{filmes.origin_country}</p>
+            <span className="text-white text-bold pr-[10px]">–</span>
+            <FaStar  className="text-amber-400 mt-[5px]" />
+            <p className="text-white text-[18px] pr-[10px]">{filmes.vote_average}</p>
+            </div>
             <p className="text-white text-[22px] font-semibold mt-[50px]  ">Sinopse</p>
             <p className="text-white text-[18px] w-11/12 ">{filmes.overview}</p>
             
-            <p className="text-white text-[18px]">{filmes.release_date}</p>
+            
             </div>
             </div>
         
@@ -48,6 +62,8 @@ function PaginaFilmes(){
              </div>
         </div>
         
+        <p className="text-white text-[30px] font-bold ml-[55px] mt-[45px]">Recomendações</p>
+        <Recomendacao/>
 
             
         

@@ -36,8 +36,9 @@ export default function Forms() {
     <>
       <div className='bg-neutral-900'>
           <div className="flex justify-center md:pt-24 pt-10">
-                  <h1 className="md:text-6xl text-5xl md:w-full w-11/12 text-center md:pt-10 pt-10 " id="contato"><soan className='text-violet-500 fontbold'>Contate</soan><span className='text-amber-400 font-bold' >-nos</span></h1>
+                  <h1 className="md:text-6xl text-5xl md:w-full w-11/12 text-center md:pt-10 pt-10 " id="contato"><soan className='text-violet-500 font-bold'>Contate</soan><span className='text-amber-400 font-bold' >-nos</span></h1>
               </div>
+              <p className='text-white text-[25px] font-semibold pl-[270px] pt-[30px]'>Nos mande perguntas, sugestões, propostas, feedback, etc</p>
               <div className="flex justify-center mt-12 ">
                   <form action="" onSubmit={sendEmail} className=" flex flex-col md:w-7/12 w-11/12">
 
@@ -46,14 +47,14 @@ export default function Forms() {
                       placeholder="Nome" 
                       onChange={(e) => setName(e.target.value)}
                       value={name}
-                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl rounded-b-md"/>
+                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl border-amber-400 rounded-b-md"/>
 
                       <input 
                       type="email" 
                       placeholder="E-mail"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
-                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl rounded-b-md"/>
+                      className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl border-amber-400 rounded-b-md"/>
 
                       <input
                       type="text" 
@@ -62,8 +63,8 @@ export default function Forms() {
                       value={message}
                       className="bg-neutral-900   mb-5 border-b-8  py-1 text-white focus:outline-none text-3xl border-amber-400 rounded-b-md"/>
 
-                      <div className="flex justify-center mt-3 pb-[150px]">
-                          <button type='submit' value="enviar" className="px-7 py-2 bg-violet-500  dark:text-nav font-bold rounded-full focus:outline-none text-3xl text-white">ENVIAR</button>
+                      <div className="flex justify-center mt-[50px] pb-[150px]">
+                          <button type='submit' value="enviar" className="px-8 py-3 bg-violet-500  dark:text-nav font-bold rounded-full focus:outline-none text-2xl text-white">ENVIAR</button>
                       </div>
 
                   </form>

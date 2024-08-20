@@ -10,7 +10,7 @@ import PaginaFilmes from './pages/pagFilme.jsx'
 import Blog from './pages/Blog.jsx'
 import Contato from './pages/Contato.jsx'
 import Search from './pages/Search.jsx'
-
+import Recomendacao from './componentes/Recomendacao/recomendacao.jsx'
 
 const router = createBrowserRouter(
   [
@@ -25,7 +25,8 @@ const router = createBrowserRouter(
         {path: "blog", element: <Blog/>},
         {path: "contato", element: <Contato/>},
         {path: "*", element: <PageNotFound/>},
-        {path: "search", element: <Search/>}
+        {path: "search", element: <Search/>},
+        {path: "/:id", element: <Recomendacao/>},
 
       ]
     }

@@ -53,7 +53,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme2.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
+                              <p className='text-white font-bold pl-6 pr-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
                               </div>
                           </div>
                           
@@ -61,7 +61,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme3.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a franquia</p>
+                              <p className='text-white font-bold pl-6 pr-6'>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a...</p>
                               </div>
                           </div>
                       
@@ -86,7 +86,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme2.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
+                              <p className='text-white font-bold pl-6 pr-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
                               </div>
                           </div>
                           
@@ -94,7 +94,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme3.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a franquia</p>
+                              <p className='text-white font-bold   '>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a...</p>
                               </div>
                           </div>
                  
@@ -119,7 +119,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme2.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
+                              <p className='text-white font-bold pl-6 pr-6'>Uma Família Feliz é o melhor do suspense brasileiro</p>
                               </div>
                           </div>
                           
@@ -127,7 +127,7 @@ function Blog() {
                               <div className="w-[244px] h-[275px]  overflow-hidden rounded-2xl shadow-md bg-zinc-800 shadow-none hover:shadow-amber-500 hover:shadow-[0px_0px_30px_3px]  duration-300
                          ease-in-out">
                               <img className='p-6' src="filme3.png" alt='#'/>
-                              <p className='text-white font-bold pl-6'>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a franquia</p>
+                              <p className='text-white font-bold pl-6 pr-6'>Kung Fu Panda 4: divertido, mas é uma pegada fraca para a...</p>
                               </div>
                           </div>
         
