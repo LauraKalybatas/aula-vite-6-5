@@ -61,7 +61,8 @@ function Filmes() {
             <span><Link to="/">HOME</Link></span>
             <span><Link to='Filmes'>FILMES</Link></span>
             <span><Link to='Blog'>BLOG</Link></span>
-            <span><Link to='Contato'>Contato</Link></span>
+            <span><a href="Contato">Contato</a></span>
+            
           </div>
         </nav> 
       </footer>
